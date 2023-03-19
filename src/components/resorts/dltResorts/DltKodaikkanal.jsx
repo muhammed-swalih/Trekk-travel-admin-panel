@@ -5,13 +5,13 @@ function DltKodaikkanal() {
   const [honeymoon, setHoneymoon] = useState([]);
 
   const fetchHoneymoon = async () => {
-    const response = await axios.get('http://localhost:3001/packages/kodaikkanal')
+    const response = await axios.get('https://trekkandtravel.onrender.com/packages/kodaikkanal')
     setHoneymoon(response.data)
 
   }
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:3001/packages/deletekodaikkanalresort/${id}`, {
+    fetch(`https://trekkandtravel.onrender.com/packages/deletekodaikkanalresort/${id}`, {
       method: "DELETE"
     })
       .then((response) => response.json())

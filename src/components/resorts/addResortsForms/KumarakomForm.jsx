@@ -22,7 +22,7 @@ function KumarakomForm() {
             formData.append("testImage", testImage);
     
             try {
-                const response = await fetch("http://localhost:3001/packages/kumarakomresort", {
+                const response = await fetch("https://trekkandtravel.onrender.com/packages/kumarakomresort", {
                     method: "POST",
                     body: formData,
                 });

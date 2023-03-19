@@ -22,7 +22,7 @@ function ThekkadyForm() {
             formData.append("testImage", testImage);
     
             try {
-                const response = await fetch("http://localhost:3001/packages/thekkadyresort", {
+                const response = await fetch("https://trekkandtravel.onrender.com/packages/thekkadyresort", {
                     method: "POST",
                     body: formData,
                 });

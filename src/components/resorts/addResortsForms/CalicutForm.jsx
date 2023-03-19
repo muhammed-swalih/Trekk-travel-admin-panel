@@ -22,7 +22,7 @@ function CalicutForm() {
             formData.append("testImage", testImage);
     
             try {
-                const response = await fetch("http://localhost:3001/packages/calicutresort", {
+                const response = await fetch("https://trekkandtravel.onrender.com/packages/calicutresort", {
                     method: "POST",
                     body: formData,
                 });

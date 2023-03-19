@@ -21,7 +21,7 @@ function OotyForm() {
             formData.append("testImage", testImage);
     
             try {
-                const response = await fetch("http://localhost:3001/packages/ootyresort", {
+                const response = await fetch("https://trekkandtravel.onrender.com/packages/ootyresort", {
                     method: "POST",
                     body: formData,
                 });

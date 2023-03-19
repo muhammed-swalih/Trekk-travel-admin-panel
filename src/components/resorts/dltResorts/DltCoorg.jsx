@@ -5,13 +5,13 @@ function DltCoorg() {
   const [honeymoon, setHoneymoon] = useState([]);
 
   const fetchHoneymoon = async () => {
-    const response = await axios.get('http://localhost:3001/packages/coorg')
+    const response = await axios.get('https://trekkandtravel.onrender.com/packages/coorg')
     setHoneymoon(response.data)
 
   }
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:3001/packages/deletecoorgresort/${id}`, {
+    fetch(`https://trekkandtravel.onrender.com/packages/deletecoorgresort/${id}`, {
       method: "DELETE"
     })
       .then((response) => response.json())

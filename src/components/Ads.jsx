@@ -34,7 +34,7 @@ function HoneyMoon() {
             formData.append("testImage", testImage);
     
             try {
-                const response = await fetch("http://localhost:3001/packages/ads", {
+                const response = await fetch("https://trekkandtravel.onrender.com/packages/ads", {
                     method: "POST",
                     body: formData,
                 });

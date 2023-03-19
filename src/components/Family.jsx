@@ -34,7 +34,7 @@ function Family() {
             formData.append("testImage", testImage);
 
             try {
-                const response = await fetch("http://localhost:3001/packages/familyPackage", {
+                const response = await fetch("https://trekkandtravel.onrender.com/packages/familyPackage", {
                     method: "POST",
                     body: formData,
                 });

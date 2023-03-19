@@ -21,7 +21,7 @@ function CoorgForm() {
             formData.append("testImage", testImage);
     
             try {
-                const response = await fetch("http://localhost:3001/packages/coorgresort", {
+                const response = await fetch("https://trekkandtravel.onrender.com/packages/coorgresort", {
                     method: "POST",
                     body: formData,
                 });

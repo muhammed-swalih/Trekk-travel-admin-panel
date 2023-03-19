@@ -5,13 +5,13 @@ function DltHoneymoon() {
     const [honeymoon, setHoneymoon] = useState([]);
 
     const fetchHoneymoon = async () => {
-        const response = await axios.get('http://localhost:3001/packages/honeymoon')
+        const response = await axios.get('https://trekkandtravel.onrender.com/packages/honeymoon')
         setHoneymoon(response.data)
 
     }
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:3001/packages/honeymoonPackage/${id}`, {
+        fetch(`https://trekkandtravel.onrender.com/packages/honeymoonPackage/${id}`, {
             method: "DELETE"
         })
             .then((response) => response.json())
