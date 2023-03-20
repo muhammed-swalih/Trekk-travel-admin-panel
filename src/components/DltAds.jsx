@@ -48,7 +48,7 @@ function DltHoneymoon() {
                                 <button onClick={()=>{
                                     console.log(items._id);
                                     handleDelete(items._id)
-                                    window.location.reload()
+                                    
                                 }} className=' rounded-3xl w-auto px-32 py-[20px] bg-red-500 text-[80px]'>Delete</button>
                             </div>
                         </div>
