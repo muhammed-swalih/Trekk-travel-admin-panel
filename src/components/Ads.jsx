@@ -15,22 +15,12 @@ function HoneyMoon() {
     const [testImage, setImage] = useState(null);
 
     const handleSubmit = async (event) => {
-        if(place.length ==0 || price.length ==0 || days.length ==0 || highlights1.length==0 || description.length==0 || testImage.length ==0){
+        if(testImage.length ==0){
             alert ('please fill the required fields')
         }else {
 
             event.preventDefault();
             const formData = new FormData();
-            formData.append("place", place);
-            formData.append("price", price);
-            formData.append("days", days);
-            formData.append('description' , description)
-            formData.append('highlights1' , highlights1)
-            formData.append('highlights2' , highlights2)
-            formData.append('highlights3' , highlights3)
-            formData.append('highlights4' , highlights4)
-            formData.append('highlights5' , highlights5)
-            formData.append('highlights6' , highlights6)
             formData.append("testImage", testImage);
     
             try {

@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import bg from '../../../assets/bg.webp'
 function CalicutForm() {
     const [place, setPlace] = useState("");
-    const [price, setPrice] = useState("");
-    const [days, setDays] = useState("");
     const [description, setDescription] = useState("");
     const [testImage, setImage] = useState(null);
 
@@ -15,9 +13,7 @@ function CalicutForm() {
 
             event.preventDefault();
             const formData = new FormData();
-            formData.append("place", place);
-            formData.append("price", price);
-            formData.append("days", days);
+            formData.append("place", place);     
             formData.append('description' , description)
             formData.append("testImage", testImage);
     

@@ -15,8 +15,6 @@ function KannurForm() {
             event.preventDefault();
             const formData = new FormData();
             formData.append("place", place);
-            formData.append("price", price);
-            formData.append("days", days);
             formData.append('description' , description)
             formData.append("testImage", testImage);
     
