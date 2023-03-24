@@ -50,20 +50,17 @@ function Family() {
 
     const rows = Math.max(3, Math.ceil(description.length / 50))
     return (
-        <div className=' w-full h-auto bg-gray-900 bg-cover' style={{ backgroundImage: `url(${bg})` }}>
-            <div className='  py-[100px]'>
-                <h1 className=' text-[100px] uppercase text-white text-center'>add family packages</h1>
-                <hr className=' w-[1000px] mx-auto my-[50px]' />
-            </div>
-            <div className='w-full mx-auto h-auto  bg-cover'>
-                <h1>Add Honeymoon Package</h1>
-                <form onSubmit={handleSubmit} className="mx-auto shadow-md rounded px-8 pt-6 pb-8 mb-4">
-                    <div className="mb-4 my-10">
-                        <label className="block text-[65px] text-gray-400  font-bold mb-10" htmlFor="place">
+        <div className=' w-full min-h-screen h-auto bg-gray-900 bg-cover pt-16' style={{ backgroundImage: `url(${bg})` }}>
+            <h1 className='uppercase text-2xl font-medium text-white text-center '>add family package</h1>
+            <hr className=' my-3 w-60 mx-auto' />
+            <div className=' w-[1150px]  flex flex-col gap-3'>
+            <form onSubmit={handleSubmit} className=" shadow-md rounded pl-10  pt-6 pb-8 mb-4">
+                    <div className="mb-4 my-2">
+                        <label className="block text-lg text-gray-400  font-bold mb-2" htmlFor="place">
                             Place:
                         </label>
                         <input
-                            className="h-[150px] rounded-3xl pl-10 bg-transparent text-[65px] shadow appearance-none border rounded w-3/6 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
+                            className="h-auto rounded-3xl pl-5 bg-transparent text-lg shadow appearance-none border rounded w-3/6 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
                             id="place"
                             type="text"
                             placeholder="Enter place name"
@@ -72,27 +69,26 @@ function Family() {
                         />
                     </div>
 
-                    <div className="mb-4 my-10">
-                        <label className="block text-gray-400 text-[65px] font-bold mb-5" htmlFor="price">
+                    <div className="mb-4 my-2">
+                        <label className="block text-gray-400 text-lg font-bold mb-2" htmlFor="price">
                             Price:
                         </label>
                         <input
-                            className=" pl-10 h-[150px] rounded-3xl bg-transparent text-[65px] shadow appearance-none border rounded w-2/6 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline "
+                            className=" pl-5 h-auto rounded-3xl bg-transparent text-lg shadow appearance-none border rounded w-2/6 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline "
                             id="price"
                             type="text"
-
                             placeholder="Enter price"
                             value={price}
                             onChange={(event) => setPrice(event.target.value)}
                         />
                     </div>
 
-                    <div className="mb-4 my-10">
-                        <label className=" block text-gray-400 text-[65px] font-bold mb-5" htmlFor="days">
+                    <div className="mb-4 my-2">
+                        <label className=" block text-gray-400 text-lg font-bold mb-2" htmlFor="days">
                             Days:
                         </label>
                         <input
-                            className="pl-10 h-[150px] rounded-3xl bg-transparent text-[65px] shadow appearance-none border rounded w-2/6 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
+                            className="pl-5  rounded-3xl bg-transparent text-lg shadow appearance-none border rounded w-2/6 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
                             id="days"
                             type="text"
                             placeholder="Enter number of days"
@@ -100,12 +96,12 @@ function Family() {
                             onChange={(event) => setDays(event.target.value)}
                         />
                     </div>
-                    <div className="mb-4 my-10">
-                        <label className="block text-gray-400 text-[65px] font-bold mb-5" htmlFor="days">
+                    <div className="mb-4 my-2">
+                        <label className="block text-gray-400 text-lg font-bold mb-2" htmlFor="days">
                             Hightlight-1:
                         </label>
                         <input
-                            className="pl-10 h-[150px] rounded-3xl bg-transparent text-[65px] shadow appearance-none border rounded w-3/6 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
+                            className="pl-5  rounded-3xl bg-transparent text-lg shadow appearance-none border rounded w-3/6 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
                             id="Hightlights1"
                             type="text"
                             placeholder="Enter the Highlight one"
@@ -113,94 +109,92 @@ function Family() {
                             onChange={(event) => setHighlights1(event.target.value)}
                         />
                     </div>
-                    <div className="mb-4 my-10">
-                        <label className="block text-gray-400 text-[65px] font-bold mb-5" htmlFor="days">
-                            Highlight-2:
+                    <div className="mb-4 my-2">
+                        <label className="block text-gray-400 text-lg font-bold mb-2" htmlFor="days">
+                            Hightlight-2:
                         </label>
                         <input
-                            className=" pl-10 h-[150px] rounded-3xl bg-transparent text-[65px] shadow appearance-none border rounded w-3/6 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
-                            id="Highlights2"
+                            className="pl-5  rounded-3xl bg-transparent text-lg shadow appearance-none border rounded w-3/6 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
+                            id="Hightlights1"
                             type="text"
-                            placeholder="Enter the Highlight two"
+                            placeholder="Enter the Highlight one"
                             value={highlights2}
                             onChange={(event) => setHighlights2(event.target.value)}
                         />
                     </div>
-                    <div className="mb-4 my-10">
-                        <label className="block text-gray-400 text-[65px] font-bold mb-2" htmlFor="days">
-                            Highlights-3:
+                    <div className="mb-4 my-2">
+                        <label className="block text-gray-400 text-lg font-bold mb-2" htmlFor="days">
+                            Hightlight-3:
                         </label>
                         <input
-                            className="pl-10 h-[150px] rounded-3xl bg-transparent text-[65px] shadow appearance-none border rounded w-3/6 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
-                            id="Highlights3"
+                            className="pl-5  rounded-3xl bg-transparent text-lg shadow appearance-none border rounded w-3/6 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
+                            id="Hightlights1"
                             type="text"
-                            placeholder="Enter the Highlight three"
+                            placeholder="Enter the Highlight one"
                             value={highlights3}
                             onChange={(event) => setHighlights3(event.target.value)}
                         />
                     </div>
-                    <div className="mb-4 my-10">
-                        <label className="block text-gray-400 text-[65px] font-bold mb-2" htmlFor="days">
-                            Highlights-4:
+                    <div className="mb-4 my-2">
+                        <label className="block text-gray-400 text-lg font-bold mb-2" htmlFor="days">
+                            Hightlight-4:
                         </label>
                         <input
-                            className="pl-10 h-[150px] rounded-3xl bg-transparent text-[65px] shadow appearance-none border rounded w-3/6 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
-                            id="Highlights4"
+                            className="pl-5  rounded-3xl bg-transparent text-lg shadow appearance-none border rounded w-3/6 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
+                            id="Hightlights1"
                             type="text"
-                            placeholder="Enter the Highlight four"
+                            placeholder="Enter the Highlight one"
                             value={highlights4}
                             onChange={(event) => setHighlights4(event.target.value)}
                         />
                     </div>
-                    <div className="mb-4 my-10">
-                        <label className="block text-gray-400 text-[65px] font-bold mb-2" htmlFor="days">
-                            Highlights-5:
+                    <div className="mb-4 my-2">
+                        <label className="block text-gray-400 text-lg font-bold mb-2" htmlFor="days">
+                            Hightlight-5:
                         </label>
                         <input
-                            className="pl-10 h-[150px] rounded-3xl bg-transparent text-[65px] shadow appearance-none border rounded w-3/6 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
-                            id="Highlights5"
+                            className="pl-5  rounded-3xl bg-transparent text-lg shadow appearance-none border rounded w-3/6 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
+                            id="Hightlights1"
                             type="text"
-                            placeholder="Enter the Highlight five"
+                            placeholder="Enter the Highlight one"
                             value={highlights5}
                             onChange={(event) => setHighlights5(event.target.value)}
                         />
                     </div>
-                    <div className="mb-4 my-10">
-                        <label className="block text-gray-400 text-[65px] font-bold mb-2" htmlFor="days">
-                            Highlights-6:
+                    <div className="mb-4 my-2">
+                        <label className="block text-gray-400 text-lg font-bold mb-2" htmlFor="days">
+                            Hightlight-6:
                         </label>
                         <input
-                            className="pl-10 h-[150px] rounded-3xl bg-transparent text-[65px] shadow appearance-none border rounded w-3/6 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
-                            id="Highlights6"
+                            className="pl-5  rounded-3xl bg-transparent text-lg shadow appearance-none border rounded w-3/6 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
+                            id="Hightlights1"
                             type="text"
-                            placeholder="Enter the Highlight six"
+                            placeholder="Enter the Highlight one"
                             value={highlights6}
                             onChange={(event) => setHighlights6(event.target.value)}
                         />
                     </div>
-                    <div className="mb-4 my-10">
-                        <label className="block text-gray-400 text-[65px] font-bold mb-2" htmlFor="days">
+                    <div className="mb-4 my-2">
+                        <label className="block text-gray-400 text-lg font-bold mb-2" htmlFor="days">
                             Description:
                         </label>
-                        <textarea
-                            className="pl-10 h-[150px] rounded-3xl bg-transparent text-[65px] shadow appearance-none  border rounded w-3/6 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
-                            id="Description"
-                            type="textarea"
-                            aria-rowspan={rows}
-
-                            placeholder="Enter the Description"
+                        <input
+                            className="pl-5  rounded-3xl bg-transparent text-lg shadow appearance-none border rounded w-3/6 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
+                            id="description"
+                            type="text"
+                            placeholder="Enter the Highlight one"
                             value={description}
                             onChange={(event) => setDescription(event.target.value)}
                         />
                     </div>
 
 
-                    <div className="mb-4 my-10">
-                        <label className="block text-gray-400 text-[65px] font-bold mb-5" htmlFor="image">
+                    <div className="mb-4 my-2">
+                        <label className="block text-gray-400 text-lg font-bold mb-5" htmlFor="image">
                             Image:
                         </label>
                         <input
-                            className="pl-10 h-[150px] rounded-3xl bg-transparent text-[65px] shadow appearance-none border rounded w-3/6 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
+                            className="pl-10  rounded-3xl bg-transparent text-lg shadow appearance-none border rounded w-3/6 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
                             id="image"
                             type="file"
                             accept="image/*"
@@ -208,9 +202,9 @@ function Family() {
                         />
                     </div>
 
-                    <div className=" my-10  flex items-center justify-between">
+                    <div className=" my-2  flex items-center justify-between">
                         <button
-                            className="bg-blue-500 rounded-3xl w-auto text-[65px] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            className="bg-blue-500 rounded-3xl w-auto text-lg hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                             type="submit"
                         >
                             Submit
@@ -218,6 +212,7 @@ function Family() {
                     </div>
                 </form>
             </div>
+            
         </div>
     )
 }

@@ -40,36 +40,38 @@ function HoneyMoon() {
 
     const rows = Math.max(3, Math.ceil(description.length / 50))
     return (
-        <div className=' w-full min-h-screen h-auto bg-gray-900 bg-cover'  style={{backgroundImage : `url(${bg})`}}>
-          <h1 className=' pt-[100px] text-[100px] text-white pl-[100px]'>post Ad</h1>
-        <div className='w-full mx-auto h-auto  bg-cover'>
-            <form onSubmit={handleSubmit} className="mx-auto ml-[70px] shadow-md rounded px-8 pt-6 pb-8 mb-4">
-                
-                
+        <div className=' w-full min-h-screen h-auto bg-gray-900 bg-cover pt-16' style={{ backgroundImage: `url(${bg})` }}>
+            <h1 className='uppercase text-2xl font-medium text-white text-center '>add ads </h1>
+            <hr className=' my-3 w-60 mx-auto' />
+            <div className=' w-6/6  flex flex-col gap-3'>
+            <form onSubmit={handleSubmit} className=" shadow-md rounded pl-10  pt-6 pb-8 mb-4">
+                   
 
-                <div className="mb-4 my-10">
-                    <label className="block text-gray-400 text-[65px] font-bold mb-5" htmlFor="image">
-                        Image:
-                    </label>
-                    <input
-                        className="pl-10 h-[150px] rounded-3xl bg-transparent text-[65px] shadow appearance-none border rounded w-3/6 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
-                        id="image"
-                        type="file"
-                        accept="image/*"
-                        onChange={(event) => setImage(event.target.files[0])}
-                    />
-                </div>
 
-                <div className=" my-10  flex items-center justify-between">
-                    <button
-                        className="bg-blue-500 rounded-3xl w-auto text-[65px] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                        type="submit"
-                    >
-                        Submit
-                    </button>
-                </div>
-            </form>
-        </div>
+                    <div className="mb-4 my-2">
+                        <label className="block text-gray-400 text-lg font-bold mb-5" htmlFor="image">
+                            Image:
+                        </label>
+                        <input
+                            className="pl-10  rounded-3xl bg-transparent text-lg shadow appearance-none border rounded w-3/6 py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline"
+                            id="image"
+                            type="file"
+                            accept="image/*"
+                            onChange={(event) => setImage(event.target.files[0])}
+                        />
+                    </div>
+
+                    <div className=" my-2  flex items-center justify-between">
+                        <button
+                            className="bg-blue-500 rounded-3xl w-auto text-lg hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                            type="submit"
+                        >
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
         </div>
     )
 }

@@ -18,6 +18,7 @@ function DltKochi() {
       .then((result) => {
         // Remove the deleted item from the data array
         setHoneymoon(honeymoon.filter((item) => item.id !== id));
+        window.location.reload();
       })
       .catch((error) => console.error(error));
   }
@@ -30,35 +31,35 @@ function DltKochi() {
 
   return (
     <div className=' w-full min-h-screen h-auto bg-cover bg-gray-900 pt-10' style={{ backgroundImage: `url(${bg})` }}>
-      <div className='  py-[100px]'>
-        <h1 className=' text-[100px] uppercase text-white text-center'>delete kochi resorts</h1>
-        <hr className=' w-[1000px] mx-auto my-[50px]' />
-      </div>
-      <div className=' w-5/6 h-auto py-10 px-10'>
-
-        {honeymoon.map((items) => {
-          const base64String = btoa(
-            String.fromCharCode(...new Uint32Array((items.image.data.data)))
-          )
-          return (
-            <div className=' my-[100px] flex justify-start gap-[220px]'>
-              <div className=' rounded-3xl w-[1500px] h-[800px] bg-white'>
-                <img className=' rounded-3xl w-full h-full object-cover' src={`data:image/jpeg;base64,${base64String}`} alt="" />
-              </div>
-              <div className=' my-auto'>
-                <h1 className=' my-[50px] text-white text-[120px]'>{items ? items.place : "place"}</h1>
-                <h1 className=' my-[50px] text-white text-[80px]'>{items ? items.price : "price"}</h1>
-                <button onClick={() => {
-                  console.log(items._id);
-                  handleDelete(items._id)
-                  window.location.reload()
-                }} className=' rounded-3xl w-auto px-32 py-[20px] bg-red-500 text-[80px]'>Delete</button>
-              </div>
+            <div className='  py-1'>
+                <h1 className=' text-3xl uppercase text-white text-center'>delete kochi packages</h1>
+                <hr className=' w-80 mx-auto my-4' />
             </div>
-          )
-        })}
-      </div>
-    </div>
+
+            <div className='w-[1150px] h-auto py-10 px-10'>
+
+                {honeymoon.map((items) => {
+                    const base64String = btoa(
+                        String.fromCharCode(...new Uint32Array((items.image.data.data)))
+                    )
+                    return (
+                        <div className=' my-10 flex justify-start gap-[220px]'>
+                            <div className=' rounded-3xl w-2/5 h-60 bg-white'>
+                                <img className=' rounded-3xl w-full h-full object-cover' src={`data:image/jpeg;base64,${base64String}`} alt="" />
+                            </div>
+                            <div className=' my-auto'>
+                                <h1 className=' my-2 text-white text-4xl'>{items ? items.place : "place"}</h1>
+                                <h1 className=' my-2 text-white text-2xl'>{items ? items.price : "price"}</h1>
+                                <button onClick={() => {
+                                    console.log(items._id);
+                                    handleDelete(items._id)
+                                }} className=' rounded-3xl w-auto px-5 py-2 bg-red-500 text-lg'>Delete</button>
+                            </div>
+                        </div>
+                    )
+                })}
+            </div>
+        </div>
   )
 }
  

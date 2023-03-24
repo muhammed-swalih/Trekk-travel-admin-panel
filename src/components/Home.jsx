@@ -1,5 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import bg from '../assets/bg.png'
+import plus from '../assets/plus.png'
+import cross from '../assets/Cross Mark.png'
+import logo from '../assets/developed.png'
 function Home() {
   const navigate = useNavigate();
 
@@ -42,51 +45,40 @@ function Home() {
   }
 
   return (
-    <div className=' w-full h-screen bg-slate-900 bg-cover pt-[500px]' style={{ backgroundImage: `url(${bg})` }} >
-      <div className='flex justify-between w-4/5 mx-auto h-auto '>
-        <div>
-        <h1 className=' text-[85px] text-white'>Hey, Shafeeq</h1>
-        <h1 className=' text-[150px] text-white'> Dashboard</h1>
-        </div>
-      </div>
+    <div className=' w-full h-auto min-h-screen bg-slate-900 bg-cover pt-20' style={{ backgroundImage: `url(${bg})` }} >
+      <div className=' my-auto flex flex-col w-[1150px] h-auto mx-auto '>
+          <div className=' flex flex-col gap-2'>
+              <h1 className=' text-white text-3xl '>Hey Shafeeq</h1>
+              <h1 className=' text-white text-5xl '>Dashboard</h1>
+          </div>
+          <div className=' w-[1150px] flex justify-between gap-3 mx-auto mt-10'>
+              <div className=' w-[500px] h-60  mx-auto rounded-2xl border border-1 border-gray-400'>
+                <h1 className=' uppercase text-center text-white text-xl my-3 flex gap-2  justify-center'>add destinations <span><img className=' mt-1' src={plus} alt="" /></span></h1>
+                <div className=' flex flex-wrap px-4 py-2 gap-5'>
+                    <div onClick={handleHoneymoonClick} className=' min-w-32  border border-1 border-gray-400 w-48 text-center px-2 py-1 rounded-lg cursor-pointer text-white text-md uppercase mx-auto'>honeymoon package</div>
+                    <div onClick={handleFamilyClick} className=' min-w-32  border border-1 border-gray-400 w-48 text-center px-2 py-1 rounded-lg cursor-pointer text-white text-md uppercase mx-auto'>family package</div>
+                    <div onClick={handleHolidayClick} className=' min-w-32  border border-1 border-gray-400 w-48 text-center px-2 py-1 rounded-lg cursor-pointer text-white text-md uppercase mx-auto'>holiday package</div>
+                    <div onClick={handleResortsClick} className=' min-w-32  border border-1 border-gray-400 w-48 text-center px-2 py-1 rounded-lg cursor-pointer text-white text-md uppercase mx-auto'>resorts</div>
+                    <div onClick={handleAdsClick} className=' min-w-32  border border-1 border-gray-400 w-48 text-center px-2 py-1 rounded-lg cursor-pointer text-white text-md uppercase mx-auto'>ads</div>
+                </div>
 
-      <div className='flex justify-between w-5/6  gap-[20px] mx-auto mt-[100px] h-60'>
-          <div className=' w-1/2 h-[1300px] border border-1 border-gray-400 py-[30px] rounded-[80px]'>
-                <div className=' text-white text-[95px] uppercase'>
-                    <h1 className=' text-center '>add  destinations</h1>
+              </div>
+              <div className=' w-[500px] h-60  mx-auto rounded-2xl border border-1 border-gray-400'>
+              <h1 className=' uppercase text-center text-white text-xl my-3 flex gap-2  justify-center'>Remove destinations <span><img className=' mt-1' src={cross} alt="" /></span></h1>
+              <div className=' flex flex-wrap px-4 py-2 gap-5'>
+                    <div onClick={handleDltHoneymoon} className=' min-w-32  border border-1 border-gray-400 w-48 text-center px-2 py-1 rounded-lg cursor-pointer text-white text-md uppercase mx-auto'>honeymoon package</div>
+                    <div onClick={handleDltFamily} className=' min-w-32  border border-1 border-gray-400 w-48 text-center px-2 py-1 rounded-lg cursor-pointer text-white text-md uppercase mx-auto'>family package</div>
+                    <div onClick={handleDltHoliday} className=' min-w-32  border border-1 border-gray-400 w-48 text-center px-2 py-1 rounded-lg cursor-pointer text-white text-md uppercase mx-auto'>holiday package</div>
+                    <div onClick={handleDltResorts} className=' min-w-32  border border-1 border-gray-400 w-48 text-center px-2 py-1 rounded-lg cursor-pointer text-white text-md uppercase mx-auto'>resorts</div>
+                    <div onClick={handleDltAds} className=' min-w-32  border border-1 border-gray-400 w-48 text-center px-2 py-1 rounded-lg cursor-pointer text-white text-md uppercase mx-auto'>ads</div>
                 </div>
-                <div className='  my-[100px] flex justify-between gap-10 w-2/3  mx-auto '>
-                    <div  onClick={handleHolidayClick} className='rounded-[80px] w-1/2 h-auto bg-black'><h1 className='text-white text-[70px] mt-[45px] text-center '>Holiday Package</h1></div>
-                    <div  onClick={handleHoneymoonClick} className='rounded-[80px] w-1/2 h-60 bg-black'><h1 className='text-white text-[70px] mt-[45px] text-center'>Honeymoon Package</h1></div>
-                </div>
-                <div className=' my-[130px] flex justify-between gap-10 w-2/3 h-60 mx-auto '>
-                    <div  onClick={handleFamilyClick} className='rounded-[80px] w-1/2 h-60 bg-black'><h1 className='text-white text-[70px] mt-[45px] text-center'>Family Package</h1></div>
-                    <div onClick={handleAdsClick} className='rounded-[80px] w-1/2 h-60 bg-black'><h1 className='text-white text-[70px] mt-[45px] text-center'>Ads</h1></div>
-                </div>
-                <div onClick={handleResortsClick} className='  flex justify-between gap-10 w-2/3 h-60 mx-auto'>
-                    <div className='mx-auto w-1/2 rounded-[80px] h-60 bg-black'><h1 className='text-white text-[70px] mt-[45px] text-center'>Resorts</h1></div>
-                    
-                </div>
+              </div>
           </div>
-          <div className=' w-1/2 h-[1300px] border border-1 border-gray-400 py-[30px] rounded-[80px]'>
-                <div className=' text-white text-[95px] uppercase'>
-                    <h1 className=' text-center '>Remove</h1>
-                </div>
-                <div className='  my-[100px] flex justify-between gap-10 w-2/3  mx-auto '>
-                    <div onClick={handleDltHoliday} className='rounded-[80px] w-1/2 h-auto bg-black '><h1 className='text-white text-[70px] mt-[45px] text-center '>Holiday Package</h1></div>
-                    <div onClick={handleDltHoneymoon} className='rounded-[80px] w-1/2 h-60 bg-black'><h1 className='text-white text-[70px] mt-[45px] text-center'>Honeymoon Package</h1></div>
-                </div>
-                <div className=' my-[130px] flex justify-between gap-10 w-2/3 h-60 mx-auto '>
-                    <div onClick={handleDltFamily} className='rounded-[80px] w-1/2 h-60 bg-black'><h1 className='text-white text-[70px] mt-[45px] text-center'>Family Package</h1></div>
-                    <div onClick={handleDltAds} className='rounded-[80px] w-1/2 h-60 bg-black'><h1 className='text-white text-[70px] mt-[45px] text-center'>Ads</h1></div>
-                </div>
-                <div onClick={handleDltResorts} className='  flex justify-between gap-10 w-2/3 h-60 mx-auto'>
-                    <div className='mx-auto w-1/2 rounded-[80px] h-60 bg-black'><h1 className='text-white text-[70px] mt-[45px] text-center'>Resorts</h1></div>
-                    
-                </div>
+          <div className='  items-start  mt-10 w-full'>
+              <img className=' ' src={logo} alt="" />
           </div>
-          
       </div>
+  
       
      
     </div>
