@@ -5,13 +5,13 @@ function DltOoty() {
   const [honeymoon, setHoneymoon] = useState([]);
 
   const fetchHoneymoon = async () => {
-    const response = await axios.get('https://trekkandtravel.onrender.com/packages/ooty')
+    const response = await axios.get('https://trekkbackend.fun/packages/ooty')
     setHoneymoon(response.data)
 
   }
 
   const handleDelete = (id) => {
-    fetch(`https://trekkandtravel.onrender.com/packages/deleteootyresort/${id}`, {
+    fetch(`https://trekkbackend.fun/packages/deleteootyresort/${id}`, {
       method: "DELETE"
     })
       .then((response) => response.json())

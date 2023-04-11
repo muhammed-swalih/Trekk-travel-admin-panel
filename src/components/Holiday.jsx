@@ -34,7 +34,7 @@ function Holiday() {
             formData.append("testImage", testImage);
 
             try {
-                const response = await fetch("https://trekkandtravel.onrender.com/packages/holidayPackage", {
+                const response = await fetch("https://trekkbackend.fun/packages/holidayPackage", {
                     method: "POST",
                     body: formData,
                 });

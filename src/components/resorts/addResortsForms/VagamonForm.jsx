@@ -20,7 +20,7 @@ function VagamonForm() {
             formData.append("testImage", testImage);
     
             try {
-                const response = await fetch("https://trekkandtravel.onrender.com/packages/vagamonresort", {
+                const response = await fetch("https://trekkbackend.fun/packages/vagamonresort", {
                     method: "POST",
                     body: formData,
                 });

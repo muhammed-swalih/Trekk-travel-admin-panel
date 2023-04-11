@@ -19,7 +19,7 @@ function ThrissurForm() {
             formData.append("testImage", testImage);
     
             try {
-                const response = await fetch("https://trekkandtravel.onrender.com/packages/thrissurresort", {
+                const response = await fetch("https://trekkbackend.fun/packages/thrissurresort", {
                     method: "POST",
                     body: formData,
                 });

@@ -19,7 +19,7 @@ function KannurForm() {
             formData.append("testImage", testImage);
     
             try {
-                const response = await fetch("https://trekkandtravel.onrender.com/packages/kannurresort", {
+                const response = await fetch("https://trekkbackend.fun/packages/kannurresort", {
                     method: "POST",
                     body: formData,
                 });

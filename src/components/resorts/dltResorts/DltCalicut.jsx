@@ -5,13 +5,13 @@ function DltCalicut() {
   const [honeymoon, setHoneymoon] = useState([]);
 
   const fetchHoneymoon = async () => {
-    const response = await axios.get('https://trekkandtravel.onrender.com/packages/calicut')
+    const response = await axios.get('https://trekkbackend.fun/packages/calicut')
     setHoneymoon(response.data)
 
   }
 
   const handleDelete = (id) => {
-    fetch(`https://trekkandtravel.onrender.com/packages/deletecalicutresort/${id}`, {
+    fetch(`https://trekkbackend.fun/packages/deletecalicutresort/${id}`, {
       method: "DELETE"
     })
       .then((response) => response.json())

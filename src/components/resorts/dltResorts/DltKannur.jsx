@@ -5,13 +5,13 @@ function DltKannur() {
   const [honeymoon, setHoneymoon] = useState([]);
 
   const fetchHoneymoon = async () => {
-    const response = await axios.get('https://trekkandtravel.onrender.com/packages/kannur')
+    const response = await axios.get('https://trekkbackend.fun/packages/kannur')
     setHoneymoon(response.data)
 
   }
 
   const handleDelete = (id) => {
-    fetch(`https://trekkandtravel.onrender.com/packages/deletekannurresort/${id}`, {
+    fetch(`https://trekkbackend.fun/packages/deletekannurresort/${id}`, {
       method: "DELETE"
     })
       .then((response) => response.json())

@@ -19,7 +19,7 @@ function KodaikkanalForm() {
             formData.append("testImage", testImage);
     
             try {
-                const response = await fetch("https://trekkandtravel.onrender.com/packages/kodaikkanalresort", {
+                const response = await fetch("https://trekkbackend.fun/packages/kodaikkanalresort", {
                     method: "POST",
                     body: formData,
                 });

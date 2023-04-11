@@ -20,7 +20,7 @@ function AllappeyForm() {
                 formData.append("testImage", testImage);
         
                 try {
-                    const response = await fetch("https://trekkandtravel.onrender.com/packages/alleppeyresort", {
+                    const response = await fetch("https://trekkbackend.fun/packages/alleppeyresort", {
                         method: "POST",
                         body: formData,
                     });

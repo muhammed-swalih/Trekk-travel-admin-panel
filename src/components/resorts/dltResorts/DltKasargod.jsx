@@ -5,13 +5,13 @@ function DltKasargod() {
   const [honeymoon, setHoneymoon] = useState([]);
 
   const fetchHoneymoon = async () => {
-    const response = await axios.get('https://trekkandtravel.onrender.com/packages/kasargod')
+    const response = await axios.get('https://trekkbackend.fun/packages/kasargod')
     setHoneymoon(response.data)
 
   }
 
   const handleDelete = (id) => {
-    fetch(`https://trekkandtravel.onrender.com/packages/deletekasargodresort/${id}`, {
+    fetch(`https://trekkbackend.fun/packages/deletekasargodresort/${id}`, {
       method: "DELETE"
     })
       .then((response) => response.json())

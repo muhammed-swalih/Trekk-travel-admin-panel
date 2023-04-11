@@ -20,7 +20,7 @@ function MalappuramForm() {
             formData.append("testImage", testImage);
     
             try {
-                const response = await fetch("https://trekkandtravel.onrender.com/packages/malappuramresort", {
+                const response = await fetch("https://trekkbackend.fun/packages/malappuramresort", {
                     method: "POST",
                     body: formData,
                 });

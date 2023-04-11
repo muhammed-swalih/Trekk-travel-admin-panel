@@ -19,7 +19,7 @@ function CoorgForm() {
             formData.append("testImage", testImage);
     
             try {
-                const response = await fetch("https://trekkandtravel.onrender.com/packages/coorgresort", {
+                const response = await fetch("https://trekkbackend.fun/packages/coorgresort", {
                     method: "POST",
                     body: formData,
                 });

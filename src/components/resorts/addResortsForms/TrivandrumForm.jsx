@@ -20,7 +20,7 @@ function TrivandrumForm() {
             formData.append("testImage", testImage);
     
             try {
-                const response = await fetch("https://trekkandtravel.onrender.com/packages/trivandrumresort", {
+                const response = await fetch("https://trekkbackend.fun/packages/trivandrumresort", {
                     method: "POST",
                     body: formData,
                 });

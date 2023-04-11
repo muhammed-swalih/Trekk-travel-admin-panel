@@ -19,7 +19,7 @@ function KasargodForm() {
             formData.append("testImage", testImage);
     
             try {
-                const response = await fetch("https://trekkandtravel.onrender.com/packages/kasargodresort", {
+                const response = await fetch("https://trekkbackend.fun/packages/kasargodresort", {
                     method: "POST",
                     body: formData,
                 });

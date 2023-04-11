@@ -20,7 +20,7 @@ function KochiForm() {
             formData.append("testImage", testImage);
     
             try {
-                const response = await fetch("https://trekkandtravel.onrender.com/packages/kochiresort", {
+                const response = await fetch("https://trekkbackend.fun/packages/kochiresort", {
                     method: "POST",
                     body: formData,
                 });

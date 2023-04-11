@@ -21,7 +21,7 @@ function KumarakomForm() {
             formData.append("testImage", testImage);
     
             try {
-                const response = await fetch("https://trekkandtravel.onrender.com/packages/kumarakomresort", {
+                const response = await fetch("https://trekkbackend.fun/packages/kumarakomresort", {
                     method: "POST",
                     body: formData,
                 });
